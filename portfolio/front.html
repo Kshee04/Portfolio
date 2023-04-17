@@ -21,7 +21,7 @@
       </ul>
     </nav>
     <div class="header-text">
-      <p>Web Developer</p>
+      <p>UI/UX DESIGNER</p>
       <h1>Hi, i'm <span> Grace </span> <br>Wanjiru Kamau from Kenya</h1>
     </div>
   </div>
@@ -37,13 +37,56 @@
         <h1 class="sub-title">About Me</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis cupiditate distinctio excepturi facere, iste iusto magnam magni molestiae nemo obcaecati porro quae quasi rem repellendus suscipit tempora tempore ullam?</p>
         <div class="tab-titles">
-          <p class="tab-links active-link">Skills</p>
-          <p class="tab-links">Experience</p>
-          <p class="tab-links">Eduction</p>
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+            <li><span>Web Development</span><br>Web app development</li>
+            <li><span>App Development</span><br>Building Android apps</li>
+          </ul>
+        </div>
+         <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2023</span><br>Web development for a Rainbow Paints and Hardware</li>
+            <li><span>2023</span><br>Web development for a  chain of restaurants</li>
+          </ul>
+        </div> <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2009-2010</span><br>Mt. Olives Preparatory School</li>
+            <li><span>2010-2018</span><br>New Junior Campus Academy</li>
+            <li><span>2019-2022</span><br>Precious Blood Riruta</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div id="services">
+  <div class="container">
+     <h1 class="sub-title">My services</h1>
+    <div class="services-list">
+
+    </div>
+  </div>
+</div>
+<script>
+  var tablink=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname){
+    for (tablink of tablink){
+      tablink.classlist.remove("active-link")
+    }
+    for (tabcontents of tabcontents){
+      tabcontents.classlist.remove("active-link");
+    }
+    event.currentTarget.add("active-link");
+    document.getElementbyId(tabname).classlist.add("active-tab");
+  }
+
+</script>
 </body>
 </html>
