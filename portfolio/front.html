@@ -1,23 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grace Portfolio</title>
+  <link rel="stylesheet" href="style.css">     
+  <script src="https://kit.fontawesome.com/a05b94e40a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
   <div id="container">
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="header-text">
@@ -31,62 +31,143 @@
   <div class="container">
     <div class="row">
       <div class="about-col-1">
-        <img src="img/logo1.jpg" alt=""height="200"width="200">
+        <img src="images/Snapchat-1325491293.jpg" alt="">
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About Me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis cupiditate distinctio excepturi facere, iste iusto magnam magni molestiae nemo obcaecati porro quae quasi rem repellendus suscipit tempora tempore ullam?</p>
-        <div class="tab-titles">
-          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-links" onclick="opentab('experience')">Experience</p>
-          <p class="tab-links" onclick="opentab('education')">Education</p>
-        </div>
-        <div class="tab-contents active-tab" id="skills">
-          <ul>
-            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-            <li><span>Web Development</span><br>Web app development</li>
-            <li><span>App Development</span><br>Building Android apps</li>
-          </ul>
-        </div>
-         <div class="tab-contents" id="experience">
-          <ul>
-            <li><span>2023</span><br>Web development for a Rainbow Paints and Hardware</li>
-            <li><span>2023</span><br>Web development for a  chain of restaurants</li>
-          </ul>
-        </div> <div class="tab-contents" id="education">
-          <ul>
-            <li><span>2009-2010</span><br>Mt. Olives Preparatory School</li>
-            <li><span>2010-2018</span><br>New Junior Campus Academy</li>
-            <li><span>2019-2022</span><br>Precious Blood Riruta</li>
-          </ul>
+        <p>I am an MIT student who is committed to work, is passionate, hardworking, organized and polite etc. As an IT student and designer, i understand and appreciate the process of creating effective experiences for the end-users. I am passionate about how technology can bring life to websites, apps, portfolios etc.My aim is to create relevant experiences for users. I work well with a team both as a team-member and a team-leader.</p><br>
+        <p>My goals are to ;use my skills and talents to fill a gap in the IT sector, contribute to design teams;to create a firm foundation for myself and give a helping hand to others.</p><br>
+        <p>I don't like being judged or judging others, being accused falsely</p>
+        <br>
+
+        <div class="row">
+          <div class="skills-col-2">
+            <p class="tab-links">Skills</p><br> 
+             <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web app development</li>
+              <li><span>App Development</span><br>Building Android apps</li>
+            </ul>
+            <br>
+          </div>
+
+          <div class="experience-col-2">
+            <p class="tab-links">Experience</p><br>
+            <ul>
+              <li><span>2023</span><br>Web development for a Rainbow Paints and Hardware</li>
+              <li><span>2023</span><br>Web development for a  chain of restaurants</li>
+            </ul>
+          </div>
+
+          <div class="education-col-2">
+            <p class="tab-links">Education</p><br>
+            <ul>
+              <li><span>2009-2010</span><br>Mt. Olives Preparatory School</li>
+              <li><span>2010-2018</span><br>New Junior Campus Academy</li>
+              <li><span>2019-2022</span><br>Precious Blood Riruta</li>
+              <li><span>2023-current</span><br>eMobilis Technology Training Institute</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <div id="services">
   <div class="container">
-     <h1 class="sub-title">My services</h1>
+    <h1 class="sub-title">My Services</h1>
     <div class="services-list">
-
+      <div>
+        <i class="fa-brands fa-code"></i>
+        <h2>Web Design</h2>
+        <p>I have skills in web development using; HTML, CSS, Bootstrap, JavaScript</p>
+      </div>
+      <div>
+        <i class="fa-brands fa-uikit"></i>
+        <h2>UI/UX Design</h2>
+      </div>
+      <div>
+        <i class="fa-brands fa-app-store"></i>
+        <h2>App Design</h2>
+        <p>I have skills in app development using Android and Kotlin.<p>
+      </div>
     </div>
   </div>
 </div>
-<script>
-  var tablink=document.getElementsByClassName("tab-links");
-  var tabcontents=document.getElementsByClassName("tab-contents");
-  function opentab(tabname){
-    for (tablink of tablink){
-      tablink.classlist.remove("active-link")
-    }
-    for (tabcontents of tabcontents){
-      tabcontents.classlist.remove("active-link");
-    }
-    event.currentTarget.add("active-link");
-    document.getElementbyId(tabname).classlist.add("active-tab");
-  }
 
-</script>
+
+<div id="portfolio">
+  <div class="container">
+    <h1  class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/hotel website.png" alt=""> 
+        <div class="layer">
+          <h3>Hotel Website</h3>
+          <p>The website displays information concerning the hotels owned by a person. </p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/Screenshot_20230418_211421_Calcwebintent.jpg" alt="" height="">
+        <div class="layer">
+          <h3>Simple Calculator App</h3>
+          <p>The app performs simple Mathematical calculations.</p> 
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/Screenshot_20230418_211920_Morn login.jpg" alt="">
+        <div class="layer">
+          <h3>LoginPage</h3>
+          <p>The page is a login page that can also bbe directed to the registration page.</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://github.com/Kshee04" class="btn">See More</a>
+  </div>
+</div>
+
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-sharp fa-solid fa-paper-plane"></i>graceshee38@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i>0799421181</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/dev-grace-kamau-640197260"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/yng_me254/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/Gracy50406251"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.tiktok.com/@yng_me254"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://github.com/Kshee04"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Made by Kamau Grace Wanjiru <i class="fa-solid fa-heart"></i>with help from Easy Tutorials,Youtube.</p>
+  </div>
+</div>
+
+<script>
+  const scriptURL = '<https://script.google.com/macros/s/AKfycbwcc_FT4zYeY_ywSAb6s4fugxTgAbScQa-erbE4gZSTd-jKHjkP9WY2KV9-NZz9XqiV2Q/exec>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script
 </body>
 </html>
